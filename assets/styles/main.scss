@@ -3,6 +3,9 @@
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+@import "../../bower_components/basis-template/assets/styles/newfish.scss";
+@import "../../bower_components/basis-template/assets/styles/flexslider.scss";
 // endbower
 
 @import "common/global";
@@ -17,3 +20,6 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+@import "layouts/producten";
+@import "layouts/landing";

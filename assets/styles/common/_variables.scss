@@ -6,4 +6,37 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary:         #adcb59;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600italic,400italic);
+
+$headings-font-family:  "Open Sans", Helvetica, Arial, sans-serif;
+//$font-family-base:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$navbar-default-bg:				 	#313333;
+$navbar-default-link-color:			#fff;
+
+$grijs_donkerder: 					#a49f96;
+
+$navbar-default-link-hover-color:          $brand-primary;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-active-color:         #333;
+$navbar-default-link-active-bg:            #eee;
+
+
+
+$content-info-bg:   			#313333;
+$content-info-color: 			grey;
+$content-info-color-header: 	$content-info-color;
+$site-info-bg:					#333;	
+
+
+$flex-height:			500px;
+$flexslider-mobile-display: '';
+$flexslider-margin: 0;
+$caption-background-color: transparent;
+
+
+// Alternate navbars
+// --------------------------------------------------
+

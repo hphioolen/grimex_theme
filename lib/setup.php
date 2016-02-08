@@ -35,6 +35,11 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+  add_image_size( 'feature-size', 390, 250, true );
+  add_image_size( 'partner-thumb', 400, 300, true );
+  add_image_size( 'product-image', 555, 260, true );
+  add_image_size( 'landing-image', 780, 230, true );
+  add_image_size( 'landing-image-right', 360, 450, true ); 
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
@@ -63,14 +68,33 @@ function widgets_init() {
     'after_title'   => '</h3>'
   ]);
 
-  register_sidebar([
-    'name'          => __('Footer', 'sage'),
-    'id'            => 'sidebar-footer',
+register_sidebar(array(
+    'name'          => __('Footer Links', 'sage'),
+    'id'            => 'sidebar-footer-1',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
-  ]);
+    'after_title'   => '</h3>',
+  ));
+  
+   register_sidebar(array(
+    'name'          => __('Footer Midden', 'sage'),
+    'id'            => 'sidebar-footer-2',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+  
+   register_sidebar(array(
+    'name'          => __('Footer Rechts', 'sage'),
+    'id'            => 'sidebar-footer-3',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 
@@ -80,12 +104,11 @@ add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 function display_sidebar() {
   static $display;
 
-  isset($display) || $display = !in_array(true, [
+  isset($display) || $display = in_array(true, [
     // The sidebar will NOT be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
-    is_front_page(),
-    is_page_template('template-custom.php'),
+    //is_page_template('template-custom.php'),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

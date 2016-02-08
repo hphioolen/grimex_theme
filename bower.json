@@ -7,7 +7,11 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "3.3.6"
+    "bootstrap-sass": "3.3.6",
+    "flexslider": "~2.6.0",
+    "font-awesome": "fontawesome#~4.5.0",
+    "fancybox": "~2.1.5",
+    "basis-template": "hphioolen/basis-template"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -30,6 +34,18 @@
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "./fonts/*",
+        "./scss/font-awesome.scss"
+      ]
+    },
+    "flexslider": {
+      "main": [
+        "./fonts/*",
+        "jquery.flexslider.js"
       ]
     }
   }

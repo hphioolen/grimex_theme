@@ -19,6 +19,20 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        $('.fancybox').fancybox();
+        
+        $(".various").fancybox({
+			maxWidth	: 800,
+			maxHeight	: 600,
+			fitToView	: false,
+			width		: '70%',
+			height		: '70%',
+			autoSize	: false,
+			closeClick	: false,
+			openEffect	: 'none',
+			closeEffect	: 'none'
+		});
+        
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -38,6 +52,45 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
+    },
+        'single_product': {
+      init: function() {
+    // store the slider in a local variable
+		  var $window = $(window),
+		      flexslider;
+		 
+		  // tiny helper function to add breakpoints
+		  function getGridSize() {
+		    return (window.innerWidth < 600) ? 2 :
+		           (window.innerWidth < 900) ? 3 : 4;
+		  }
+		 
+		 
+		  $window.load(function() {
+		    $('#partner').flexslider({
+		      animation: "slide",
+		      animationLoop: true, //werkt nog niet!! meeste wat ik gevonden heb is dat itemwidth dan uit moet staan maar dan heb je geen carousel...
+		      slideshow: false,
+		      itemWidth: 205,
+		      itemMargin: 0,
+		      controlNav: false,
+		      minItems: getGridSize(), // use function to pull in initial value
+		      maxItems: getGridSize(), // use function to pull in initial value
+		      start: function(slider){
+				flexslider = slider;
+				}
+		    });
+		  });
+		 
+		  // check grid size on resize event
+		  $window.resize(function() {
+		    var gridSize = getGridSize();
+		 
+		    flexslider.vars.minItems = gridSize;
+		    flexslider.vars.maxItems = gridSize;
+		  });
+
+    	}
     }
   };
 

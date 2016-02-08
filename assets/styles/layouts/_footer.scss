@@ -1,0 +1,64 @@
+#extra_landing {
+	
+	background: $grijs_donkerder;
+}
+
+
+.logos, .projecten, .beschrijving {
+	background: #ededed;
+	padding: 10px 0 60px 0;
+	//margin-top: 20px;
+	h2 {
+		//color: #fff;
+	}
+	.flexslider {
+		height: auto!important;
+	}
+	.carousel .slides li {
+   	 margin-right: 0px
+	}
+}
+.logos{
+	h2{text-align: center;}
+	
+}
+
+.footer-holder{
+	
+	//background: url(../images/footerBg.jpg) no-repeat 50% 50% #3b3c3d;
+	background-size: cover;
+	border-top: 5px solid $brand-secondary;
+	padding-top: 30px;	
+	
+	.content-info, .site-info {
+		background: transparent;
+	}
+	.site-info{
+		
+		.container{
+			border-top: 1px solid #666;
+			padding: 20px 0;
+			
+		}
+	}
+}
+
+.content-info {
+       
+       border-bottom: 1px solid #232323;
+    a{ }
+    h2,h3 {}
+    ul{	    
+	   // list-style-type: none;
+	    
+	    li{
+	  
+    	} 
+    }
+}
+
+#map{
+	height: 300px;
+	width: 100%;
+}
+

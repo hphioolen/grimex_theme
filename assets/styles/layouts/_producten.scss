@@ -1,0 +1,64 @@
+.post-type-archive-product {
+	
+	.header-intro {
+		margin-bottom: 30px;
+	}
+	
+	a {
+		.product-description-content{
+			text-decoration: none;
+			background: #f7f7f7;
+			margin-bottom: 30px;
+			border: 1px solid #cdcdcd;
+			img{
+				width: 100%;
+			}
+			.content-text{
+				padding: 10px;
+			}
+		}&:hover{
+			
+			text-decoration: none;
+			
+			.product-description-content{
+			
+				box-shadow: 0px 1px 9px 1px #696969;
+				
+				-webkit-transition: all 0.2s ease-in-out;
+				-moz-transition: all 0.2s ease-in-out;
+				-ms-transition: all 0.2s ease-in-out;
+				-o-transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;
+			}
+		}
+		
+	}
+	
+	
+}
+
+.single-product .main {
+	text-align: center;
+}
+
+.logos .flexslider{
+	height:auto !important;
+}
+
+
+.beschrijving {
+	margin-top: 0;
+		
+	h2 {
+		margin-bottom: 30px;
+	}
+	.beschrijving-links {
+		font-size: 1.2em;
+		
+		.formulierButton {
+			clear: both;
+			display: block;
+			margin-top: 20px;
+		}
+	}
+}
